@@ -1,0 +1,18 @@
+define text
+define pattern
+create contains_pattern variable
+  set contains_pattern to FALSE
+create match_count variable
+  set match_count to 0
+if all lines of text havent been searched:
+  search next line of text
+  iterate variable contains_pattern
+  iterate variable match_count
+if match of word has been found in the text:
+  set variable contains_pattern to true
+  set variable match_count to number greater than 0 indicating how often pattern match was found in text
+  state "pattern found"
+otherwise:
+  set variable contains_pattern to false
+  set variable match_count to 0
+  state "pattern not found"
