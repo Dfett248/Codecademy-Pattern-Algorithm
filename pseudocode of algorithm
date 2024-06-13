@@ -4,13 +4,18 @@ create contains_pattern variable
   set contains_pattern to FALSE
 create match_count variable
   set match_count to 0
+create character_count variable
+  set character_count variable to 0
 if all lines of text havent been searched:
   search next line of text
   iterate variable contains_pattern
   iterate variable match_count
-if match of word has been found in the text:
+  iterate variable character_count
+if match of pattern has been found in the text:
   set variable contains_pattern to true
   set variable match_count to number greater than 0 indicating how often pattern match was found in text
+  set variable character_count to number of characters that were found
+if all characters of a match have been found:
   state "pattern found"
 otherwise:
   set variable contains_pattern to false
