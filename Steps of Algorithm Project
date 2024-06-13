@@ -1,12 +1,16 @@
----input the pattern that's being searched for in text--- (strikethrough)
+---input the pattern that's being searched for in the text--- (strikethrough)
 --Enter-- (strikethrough) State the text
 --Enter-- (strikethrough) State the pattern
 Was every line of text searched?
   if no: then search the next line 
-  if yes: was pattern found?
-Keep track of whether or not text contains pattern with variable contains_pattern
-Keep track of whether or not all characters of pattern are found on each line of text with variable 
+  if yes: was the pattern found?
+Keep track of whether or not text contains a pattern with variable contains_pattern
+Keep track of whether or not all characters of the pattern are found on each line of text with variable 
 match_count
-If all characters of pattern are not found on --one-- (strikethrough) a line move to the next line 
+If all characters of the pattern are not found on --one-- (strikethrough) a line move to the next line 
   do this too if characters are not found on a line
   however: if a few characters are found put amount of characters in match_count
+if all characters of the pattern are found on a line: 
+  input amount of characters in variable match_count
+if the pattern is found in the text set variable contains_pattern to TRUE
+  otherwise: set variable contains_pattern to FALSE if the pattern is not found anywhere in the text
