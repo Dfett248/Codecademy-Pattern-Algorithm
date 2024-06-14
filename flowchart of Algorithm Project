@@ -1,0 +1,25 @@
+'''mermaid
+graphTD;
+START-->state the text;
+State the text-->state the pattern;
+State the pattern-->create variable contains_pattern;
+Create variable contains_pattern-->create variable match_count;
+Create variable match_count-->search each line of text for match between number of characters 
+in pattern & pattern found in text;
+Search each line of text for match between number of characters 
+in pattern & pattern found in text-->was every line of text searched?;
+Was every line of text searched-->YES or NO;
+NO-->search next line of text;
+Search next line of text-->iterate variable contains_pattern;
+Iterate variable contains_pattern-->iterate variable match_count;
+Iterate variable match_count-->was every line of text searched?;
+Was every line of text searched-->YES;
+YES-->was match pattern found on the lines of text?;
+Was match pattern found on the lines of text-->YES or NO;
+NO-->set variable contains_pattern to FALSE;
+Set variable contains_pattern to FALSE-->set variable match_count to 0;
+Ser variable match_count to 0-->no pattern found;
+YES-->set variable contains_pattern to TRUE;
+Set variable contains_pattern to TRUE-->set variable match_count to number of times 
+greater than 0 where pattern was found;
+Set variable match_count to number of times greater than 0 where pattern was found-->pattern found
